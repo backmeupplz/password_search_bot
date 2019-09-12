@@ -8,11 +8,18 @@ import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 const randomToken = RandomToken.create('0123456789')
 
 export async function startEmailValidation(ctx: ContextMessageUpdate) {
-  ctx.dbuser.email = ctx.message.text
-  ctx.dbuser.numbers = randomToken(6)
-  send(ctx.dbuser.numbers, ctx.dbuser.email)
-  await ctx.dbuser.save()
-  return ctx.reply(ctx.i18n.t('email', { email: ctx.message.text }), ExtraHTML)
+  try {
+    ctx.dbuser.email = ctx.message.text
+    ctx.dbuser.numbers = randomToken(6)
+    send(ctx.dbuser.numbers, ctx.dbuser.email)
+    await ctx.dbuser.save()
+    return ctx.reply(
+      ctx.i18n.t('email', { email: ctx.message.text }),
+      ExtraHTML
+    )
+  } catch (err) {
+    return ctx.reply(ctx.i18n.t('error'))
+  }
 }
 
 export async function validateEmail(ctx: ContextMessageUpdate) {

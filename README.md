@@ -16,6 +16,8 @@ And you should be good to go! Feel free to fork and submit pull requests. Thanks
 
 - `TOKEN` — Telegram bot token
 - `MONGO`— URL of the mongo database
+- `SMTP_USER` — Email to use for nodemailer
+- `SMTP_PASS` - Password for that email
 
 Also, please, consider looking at `.env.sample`.
 

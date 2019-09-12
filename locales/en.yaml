@@ -17,3 +17,4 @@ email_failed: Sorry, but these numbers are wrong. Number of failures — ${faile
 clear: All clear! I haven't found any passwords for this email.
 delete: Delete
 removed: Removed.
+error: Something went wrong. Please, contact @borodutch for support.
