@@ -11,7 +11,7 @@ export async function checkSubscription(
       goldenBorodutchId,
       ctx.from.id
     )
-    if (member.status === 'member') {
+    if (['member', 'creator', 'administrator'].includes(member.status)) {
       return next()
     } else {
       return ctx.reply(ctx.i18n.t('subscription'))

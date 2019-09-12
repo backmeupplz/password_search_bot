@@ -40,12 +40,12 @@ bot.command('add', async ctx => {
   await addPasswords()
   ctx.reply('cool')
 })
+// Replies
+bot.action(locales, selectLanguage)
+bot.action('delete', deleteEmail)
 // Emails
 bot.use(checkSubscription)
 bot.hears(emailRegex, startEmailValidation)
 bot.hears(/^\d\d\d\d\d\d$/i, validateEmail)
-// Replies
-bot.action(locales, selectLanguage)
-bot.action('delete', deleteEmail)
 // Launch
 bot.launch().then(() => console.log('Bot is up'))
