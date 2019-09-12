@@ -19,10 +19,15 @@ export async function findPasswords(
   return PasswordModel.findOne({ email })
 }
 
-export async function addPasswords() {
-  const p = new PasswordModel({
-    email: 'a@a.com',
-    passwords: ['123456', 'password', 'noice'],
-  })
-  await p.save()
+export async function addPassword(email, password) {
+  let pass = await PasswordModel.findOne({ email })
+  if (!pass) {
+    pass = await new PasswordModel({
+      email,
+      passwords: [password],
+    }).save()
+  } else {
+    pass.passwords.push(password)
+    await pass.save()
+  }
 }

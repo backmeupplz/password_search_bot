@@ -1,4 +1,6 @@
 // Dependencies
+import { ContextMessageUpdate } from 'telegraf'
+import { ExtraHTML } from '../helpers/ExtraHTML'
 
 const privacy = `Privacy Policy of @password_search_bot
 @password_search_bot operates the @password_search_bot bot, which provides the SERVICE.
@@ -35,3 +37,7 @@ We may update our Privacy Policy from time to time. Thus, we advise you to revie
 
 Contact Us
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.`
+
+export function sendPrivacy(ctx: ContextMessageUpdate) {
+  return ctx.reply(privacy, ExtraHTML)
+}

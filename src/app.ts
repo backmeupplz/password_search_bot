@@ -21,7 +21,7 @@ import {
 import { cancel } from './commands/cancel'
 import { checkSubscription } from './middlewares/checkSubscription'
 import { checkBan } from './middlewares/checkBan'
-import { addPasswords } from './models'
+import { sendPrivacy } from './commands/privacy'
 
 // Setup bot
 const bot = new Telegraf(process.env.TOKEN)
@@ -36,10 +36,7 @@ bot.use(checkBan)
 bot.command('language', sendLanguageKeyboard)
 bot.command(['start', 'help'], sendHelp)
 bot.command('cancel', cancel)
-bot.command('add', async ctx => {
-  await addPasswords()
-  ctx.reply('cool')
-})
+bot.command('privacy', sendPrivacy)
 // Replies
 bot.action(locales, selectLanguage)
 bot.action('delete', deleteEmail)
