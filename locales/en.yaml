@@ -4,7 +4,7 @@ language_selected: <b>Password Search</b> now speaks English.
 help: |
   <b>Password Search</b> allows you to quickly and efficiently find unmasked plain text passwords that were leaked to the Internet. Just send me an email address and I will respond with the list of the leaked passwords in plain text after email verification. You can change the language with the /language command.
 
-  You will receive a message with 6 digits to your email from <code>anonymous@passwordsear.ch</code>, please, check the spam folder as well. Never tell this code to anyone but me. Send these 6 digits to me and I will respond with the passwords.
+  You will receive a message with 6 digits to your email from <code>noreply@passwordsear.ch</code>, please, check the spam folder as well. Never tell this code to anyone but me. Send these 6 digits to me and I will respond with the passwords.
 
   Note that you will have to be subscribed to @golden_borodutch channel for the bot to work. Please, find support at @borodutch_support. Thank you!
 email: I sent you 6 digits to ${email}, please, send them to this chat. Also, make sure to check you spam folder. You can always /cancel.
