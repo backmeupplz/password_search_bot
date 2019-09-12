@@ -15,15 +15,19 @@
     "watch-js": "nodemon dist/app.js"
   },
   "dependencies": {
+    "@hasezoey/typegoose": "^5.9.1",
     "@types/dotenv": "^6.1.0",
     "@types/js-yaml": "^3.11.4",
     "@types/node": "^12.7.5",
+    "concurrently": "^4.1.2",
     "dotenv": "^8.1.0",
     "fuzzysearch": "^1.0.3",
     "js-yaml": "^3.12.1",
+    "mongoose": "^5.7.0",
+    "nodemon": "^1.19.2",
+    "random-token": "^0.0.8",
     "telegraf": "^3.26.0",
     "telegraf-i18n": "^6.4.0",
-    "typegoose": "^5.4.1",
-    "typescript": "^3.2.2"
+    "typescript": "^3.6.3"
   }
 }

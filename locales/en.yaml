@@ -1,0 +1,19 @@
+name: English
+language: Please, select the language.
+language_selected: <b>Password Search</b> now speaks English.
+help: |
+  <b>Password Search</b> allows you to quickly and efficiently find unmasked plain text passwords that were leaked to the Internet. Just send me an email address and I will respond with the list of the leaked passwords in plain text after email verification. You can change the language with the /language command.
+
+  You will receive a message with 6 digits to your email from <code>anonymous@passwordsear.ch</code>, please, check the spam folder as well. Never tell this code to anyone but me. Send these 6 digits to me and I will respond with the passwords.
+
+  Note that you will have to be subscribed to @golden_borodutch channel for the bot to work. Please, find support at @borodutch_support. Thank you!
+email: I sent you 6 digits to ${email}, please, send them to this chat. Also, make sure to check you spam folder. You can always /cancel.
+email_validated: Great! You have completed validation. Please, find the passwords found below. Use the "Delete" button to delete the records from our database. Careful, it cannot be undone. Also, please, note that we might add new passwords in future so check here from time to time to see if any of your passwords were leaked.
+canceled: Canceled.
+subscription: Please, subscribe to @golden_borodutch for the bot to work. Thank you.
+no_numbers: No email has been submitted for validation yet. Please, send me an email so that I can search for the leaked passwords.
+banned: Sorry, but you have been banned for too many failed attempts at the email validation. Please, contact @borodutch in case if you think it was a mistake. Thank you.
+email_failed: Sorry, but these numbers are wrong. Number of failures — ${failedAttempts}/3. When it reaches 3 you will be banned. You can always /cancel the validation.
+clear: All clear! I haven't found any passwords for this email.
+delete: Delete
+removed: Removed.
